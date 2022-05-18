@@ -17,6 +17,24 @@ export class King extends Figure {
          return false;
       }
 
-      return true;
+      if (target.y === this.cell.y - 1 && target.x === this.cell.x) {
+         return true;
+      } else if (target.y === this.cell.y + 1 && target.x === this.cell.x) {
+         return true;
+      } else if (target.y === this.cell.y && target.x === this.cell.x + 1) {
+         return true;
+      } else if (target.y === this.cell.y && target.x === this.cell.x - 1) {
+         return true;
+      } else if (target.y === this.cell.y + 1 && target.x === this.cell.x - 1) {
+         return true;
+      } else if (target.y === this.cell.y + 1 && target.x === this.cell.x + 1) {
+         return true;
+      } else if (target.y === this.cell.y - 1 && target.x === this.cell.x - 1) {
+         return true;
+      } else if (target.y === this.cell.y - 1 && target.x === this.cell.x + 1) {
+         return true;
+      }
+
+      return false;
    }
 }
